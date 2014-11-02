@@ -42,8 +42,10 @@ static NSURL* exportAnimatedGif(NSArray* imagePaths) {
 
     for ( NSString *imagePath in imagePaths )
     {
-//        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
-        UIImage *image = [UIImage imageNamed:imagePath];
+        // Jason (Nov2,2014): Switched to using imageWithContentsOfFile instead of imagePath; due to nul pointer
+        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+//        UIImage *image = [UIImage imageNamed:imagePath];
+//        NSLog(@"Image Parameter 3 %@ image %@ imagepath %@ imagepaths %@", image.CGImage, image, imagePath, imagePaths);
         CGImageDestinationAddImage(destination, image.CGImage, (CFDictionaryRef)frameProperties);
     }
 //    CGImageDestinationAddImage(destination, bucho.CGImage, (CFDictionaryRef)frameProperties);

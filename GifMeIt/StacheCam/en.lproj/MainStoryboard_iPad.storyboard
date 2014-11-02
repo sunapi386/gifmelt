@@ -38,6 +38,7 @@
                                         <connections>
                                             <action selector="buttonTouchDown:" destination="CZk-1F-Ogj" eventType="touchDown" id="jg3-RZ-1cb"/>
                                             <action selector="buttonTouchUp:" destination="CZk-1F-Ogj" eventType="touchUpInside" id="wCg-Fm-wfg"/>
+                                            <segue destination="mlB-1X-a1p" kind="modal" id="mWZ-Ja-2iy"/>
                                         </connections>
                                     </button>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="QmI-XQ-s8k">
@@ -165,4 +166,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="mWZ-Ja-2iy"/>
+    </inferredMetricsTieBreakers>
 </document>
